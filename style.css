@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "content";
+
+    background-color: #4c494f;
+}
+
+#content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card {
+    flex: 1;
+    margin: 75px;
+    width: 75%;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: rgb(50, 50, 50);
+
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "on"
+        "off"
+        "toggle";
+}
+
+.button {
+    color: #9f9f9f;
+    font-size: 7.5vh;
+    font-family: Roboto;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#on {
+    grid-area: on;
+}
+
+#off {
+    grid-area: off;
+}
+
+#toggle {
+    grid-area: toggle;
+}
