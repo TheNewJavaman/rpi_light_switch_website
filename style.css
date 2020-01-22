@@ -21,19 +21,28 @@ body {
 
 #card {
     flex: 1;
-    margin: 75px;
+    margin: 50px;
     width: 75%;
     border-radius: 25px;
     overflow: hidden;
     background-color: rgb(50, 50, 50);
 
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 100%;
+    grid-template-rows: 20% auto 20%;
+    grid-template-columns: 50% 50%;
     grid-template-areas:
-        "on"
-        "off"
-        "toggle";
+        "light-strip light-strip"
+        "toggle toggle"
+        "on off";
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #9f9f9f;
 }
 
 .button {
@@ -41,13 +50,21 @@ body {
     font-size: 7.5vh;
     font-family: Roboto;
     font-weight: 300;
-    text-align: center;
     cursor: pointer;
     user-select: none;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#light-strip {
+    grid-area: light-strip;
 }
 
 #on {
     grid-area: on;
+    border-right: 3px solid rgb(40, 40, 40);
 }
 
 #off {
@@ -55,5 +72,7 @@ body {
 }
 
 #toggle {
+    border-bottom: 3px solid rgb(40, 40, 40);
+    border-top: 3px solid rgb(40, 40, 40);
     grid-area: toggle;
 }
